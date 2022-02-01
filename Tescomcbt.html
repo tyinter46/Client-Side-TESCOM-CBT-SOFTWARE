@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Google Map</title>
+
+    <body>
+        <div id ="timer"></div>
+        <style> 
+        #timer {
+            background-color :green;
+            color : red
+
+        }
+        </style>
+   
+        <script>
+          console.log("hi")
+            function showTimer (){
+          let minute = 20
+          let sec = 60
+         return  setInterval( function(){
+              document.getElementById("timer").innerHtml = minute + " : " + sec;
+              sec--;
+              if (sec == 00) {
+                  minute --
+                  sec = 60
+                  if (minute = 00) {
+                      minute = 5 
+                  }
+              }
+          }, 1000)
+          }
+          showTimer()
+              </script>
+        
+    </body>
+</html>
+
+
